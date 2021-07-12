@@ -12,9 +12,13 @@ export HOMEBREW_NO_ANALYTICS=1
 # Disable warning about insecure completion-dependent directories
 ZSH_DISABLE_COMPFIX=true
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
-unalias rm # No interactive rm by default (brought by plugins/common-aliases)
+# unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed (to manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
