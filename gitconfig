@@ -49,3 +49,6 @@
 
 [pull]
   rebase = false
+[user]
+	email = kahalahmunji@gmail.com
+	name = Munji Kahalah
